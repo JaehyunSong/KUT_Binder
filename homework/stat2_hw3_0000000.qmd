@@ -8,19 +8,22 @@ format:
     pdf-engine: lualatex
     documentclass: ltjsarticle
     fontsize: 10.5pt
+    linestretch: 1.15
 knitr: 
   opts_chunk: 
+    echo: true
+    message: false
+    warning: true
+    error: true
     dev: ragg_png
     dpi: 300
     fig-align: center
-    echo: true
-    error: true
 ---
 
 ## 注意事項
 
-- **提出期限：**2025年2月11日（火）23時59分（日本時間）
-- **提出方法：**[KUTLMS](https://lms.kochi-tech.ac.jp/course/view.php?id=2797) の「課題の提出場所」（トピック 1 の上にある）の「課題1」にファイルを提出する。
+- **提出期限：**2025年2月15日（土）23時59分（日本時間）
+- **提出方法：**KUTLMSの「課題の提出場所」の「課題3」にファイルを提出する。
 - 本Quarto文書をrenderして作った**PDFファイル**を提出しなさい。
   - Quarto文書をrenderしたPDFファイル以外は受け付けない。
 - 提出するファイル名は、**`stat2_hw1_自分の学籍番号.pdf`**とすること。
