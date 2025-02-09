@@ -1,0 +1,99 @@
+---
+title: "Quartoによるスライド作成（PDF版）"
+subtitle: "『私たちのR』をR教の聖典にすべき"
+date: "2025/2/11"
+author: "\\ltjruby{宋}{そん}\\ltjruby{財泫}{じぇひょん}"
+institute: "関西大学"
+language:
+  en:
+    crossref-fig-title: "図"
+    crossref-tbl-title: "表"
+knitr: 
+  opts_chunk: 
+    dev: "ragg_png"
+    dpi: 300
+    fig.align: "center"
+    echo: true
+    message: false
+    warning: false
+    error: false
+format: 
+  beamer:
+    pdf-engine: lualatex
+    theme: metropolis
+    classoption:
+      - aspectratio=169
+      - 10.5pt
+    include-in-header: 
+      text: |
+        \usepackage[haranoaji, deluxe]{luatexja-preset}
+        \usepackage{luatexja-ruby}
+        \renewcommand{\kanjifamilydefault}{\gtdefault}
+---
+
+## スライドの構成
+
+- YAMLヘッダーはこのテンプレをコピペして良い
+- スライドの区分は`##`で区切る
+
+## 段組の例
+
+::::{.columns}
+:::{.column width=30%}
+![聖典の神々しい姿](https://jaysong.net/RBook/Figs/Cover.png){#fig-bible}
+:::
+
+:::{.column width=70%}
+- 左30%、右70%の例
+- @fig-bible のR猫は宋が描きました。
+:::
+::::
+
+## 数式の例
+
+- インライン（inline）数式の例：$e = mc^2$
+- 独立した行の数式
+
+$$
+f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp{\biggl(-\frac{(x - \mu)^2}{2\sigma^2}\biggr)}
+$$
+
+## テーマの変更
+
+- 今のテーマはmetropolis
+- テーマを変更したい場合は、YAMLヘッダーを修正
+   - `theme: metropolis`　$\rightarrow$　`theme: ほにゃほにゃ`
+- KUTテーマ（Made in Kochi）もあるが、別途の作業が必要
+   - <https://github.com/yukiyanai/KUT-Beamer>
+
+
+宋のおすすめテーマ（別途の作業は不要だが、初回は時間がかかる）
+
+::: {.incremental}
+- `theme: metropolis`
+- `theme: SimplePlus`
+- `theme: SimpleDarkBlue`
+:::
+
+## 表
+
+||パラメーター|統計量|
+|:---:|:---------|:---------------------|
+|1|母平均（$\mu$）|標本平均（$\bar{x}$）|
+|2|母比率（$\pi$）|標本比率（$p$）|
+|3|母分散（$\sigma^2$）|標本分散（$s^2$）・標本不偏分散（$u^2$）|
+|4|母標準偏差（$\sigma$）|標本標準偏差（$s$）・標本不偏分散の平方根（$u$）|
+
+: パラメーターと統計量間の関係 {#tbl-parameters}
+
+## Rコードの挿入
+
+```{r}
+#| fig-width: 2.5
+#| fig-height: 1.5
+library(tidyverse)
+iris |>
+  ggplot() +
+  geom_histogram(aes(x = Sepal.Length), color = "white", bins = 10) +
+  labs(x = "萼片の長さ", y = "度数")
+```
