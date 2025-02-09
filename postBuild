@@ -67,4 +67,6 @@ quarto install tinytex
 
 Rscript setup.R
 
+mv -f rstudio-prefs.json ~/.config/rstudio/rstudio-prefs.json
+
 rm apt.txt README.md environment.yml postBuild setup.R
