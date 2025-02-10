@@ -69,6 +69,6 @@ Rscript setup.R
 
 # RStudio設定の移植
 mkdir -p ~/.config/rstudio
-cp rstudio-prefs.json ~/.config/rstudio/rstudio-prefs.json
+mv rstudio-prefs.json ~/.config/rstudio/rstudio-prefs.json
 
 rm apt.txt README.md environment.yml postBuild setup.R
