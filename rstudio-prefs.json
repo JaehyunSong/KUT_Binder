@@ -17,7 +17,7 @@
     "help_font_size_points": 12,
     "font_size_points": 12,
     "server_editor_font_enabled": true,                      
-    "server_editor_font": "Andale Mono",
+    "server_editor_font": "PlemolJP",
     "cran_mirror": {
         "name": "Japan (Yonezawa) [https]",
         "host": "Yamagata University",

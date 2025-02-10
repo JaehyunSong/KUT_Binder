@@ -67,6 +67,9 @@ quarto install tinytex
 
 Rscript setup.R
 
+# PlemolJPフォントの登録
+fc-cache -fv
+
 # RStudio設定の移植
 mkdir -p ~/.config/rstudio
 mv rstudio-prefs.json ~/.config/rstudio/rstudio-prefs.json
