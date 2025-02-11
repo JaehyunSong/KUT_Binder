@@ -9,6 +9,10 @@ format:
     documentclass: ltjsarticle
     fontsize: 10.5pt
     linestretch: 1.15
+    include-in-header:
+      text: |
+        \usepackage[haranoaji, deluxe]{luatexja-preset}
+        \renewcommand{\textbf}[1]{\textgt{#1}}
 knitr: 
   opts_chunk: 
     echo: true
