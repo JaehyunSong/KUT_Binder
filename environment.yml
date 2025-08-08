@@ -6,6 +6,7 @@ dependencies:
   - r-tidyverse
   - r-xlsx
   - r-haven
+  - r-readxl
   - r-remotes
   - r-devtools
   - r-pacman
@@ -47,6 +48,7 @@ dependencies:
   - r-ggmosaic
   - r-gt
   - r-ghibli
+  - r-texreg
   # Spatial
   - r-sf
   - r-rgeos
