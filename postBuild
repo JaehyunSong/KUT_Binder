@@ -69,4 +69,4 @@ Rscript setup.R
 mkdir -p ~/.config/rstudio
 mv rstudio-prefs.json ~/.config/rstudio/rstudio-prefs.json
 
-rm apt.txt README.md environment.yml postBuild setup.R
+rm apt.txt README.md environment.yml postBuild setup.R .gitignore
