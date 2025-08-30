@@ -1,24 +1,26 @@
 ---
-title: "2025年度計量経済学"
-subtitle: "最終課題"
-date: now
+title: "2025年度「計量経済学」最終課題"
+date: "`r Sys.Date()`"
 author: "坂本 龍馬（0360103）" # <- 自分の氏名と学生番号に修正すること
-lang: ja
-format: 
-  html:
-    theme: [cosmo, brand]
-    highlight-style: a11y
-    number-sections: true
-    embed-resources: true
-knitr: 
-  opts_chunk: 
-    dev: "ragg_png"
-    dpi: 300
-    fig.align: "center"
-    echo: true
-    message: false
-    warning: false
+output: 
+  html_document:
+    highlight: "pygments"
+    number_sections: true
+    self_contained: true
 ---
+
+```{r}
+#| include: false
+knitr::opts_chunk$set(
+  dev       =  "ragg_png",
+  dpi       = 300,
+  fig.align = "center",
+  echo      = TRUE,
+  message   = FALSE,
+  warning   = FALSE,
+  error     = TRUE
+)
+```
 
 # 問題1
 
@@ -27,6 +29,8 @@ knitr:
 
 
 <!-- 問題1はここまで --->
+
+---
 
 # 問題2
 
@@ -45,6 +49,8 @@ knitr:
 
 
 <!-- 問題2-2はここまで --->
+
+---
 
 # 問題3
 
@@ -72,6 +78,8 @@ knitr:
 
 <!-- 問題3-3はここまで --->
 
+---
+
 # 問題4
 
 ## 問題4-1
@@ -89,6 +97,8 @@ knitr:
 
 
 <!-- 問題4-2はここまで --->
+
+---
 
 # 問題5
 
